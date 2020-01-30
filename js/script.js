@@ -11,19 +11,24 @@ $(document).ready(function () {
         url: "https://flynn.boolean.careers/exercises/api/random/int",
         method: "GET",
         success: function (data, stato) {
+          console.log($(this));
+          var element = $(this);
           var numero = data.response;
+          var box = $('.box');
+          console.log(box);
           console.log(numero);
           if (numero <= 5){
-            $('.box').addClass('yellow').text(numero);
+            element.addClass('yellow').text(numero);
           }
           else if (numero >= 5) {
-            $('.box').addClass('green').text(numero);
+            element.addClass('green').text(numero);
           }
         },
         error: function (richiesta, stato, errore) {
            alert("E' avvenuto un errore. " + errore);
         }
       });
+      console.log(chiamata);
     };
 });
 });
