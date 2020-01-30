@@ -6,21 +6,18 @@ $(document).ready(function () {
   // Il numero ottenuto appare al centro del quadrato.
 
   $(document).on('click', '.box', function(){
-    if($(this).hasClass('yellow') == false|| $(this).hasClass('green') == false){
+    var element = $(this);
+    if($(this).hasClass('yellow') == false && $(this).hasClass('green') == false){
       var chiamata = $.ajax({
         url: "https://flynn.boolean.careers/exercises/api/random/int",
         method: "GET",
         success: function (data, stato) {
           console.log($(this));
-          var element = $(this);
           var numero = data.response;
-          var box = $('.box');
-          console.log(box);
-          console.log(numero);
           if (numero <= 5){
             element.addClass('yellow').text(numero);
           }
-          else if (numero >= 5) {
+          else if (numero > 5) {
             element.addClass('green').text(numero);
           }
         },
@@ -28,7 +25,6 @@ $(document).ready(function () {
            alert("E' avvenuto un errore. " + errore);
         }
       });
-      console.log(chiamata);
     };
 });
 });
