@@ -12,20 +12,18 @@ $(document).ready(function () {
         method: "GET",
         success: function (data, stato) {
           var numero = data.response;
-          var box = $('.box');
           console.log(numero);
           if (numero <= 5){
-            $(this).addClass('yellow').text(numero);
+            $('.box').addClass('yellow').text(numero);
           }
           else if (numero >= 5) {
-            $(this).addClass('green').text(numero);
+            $('.box').addClass('green').text(numero);
           }
         },
         error: function (richiesta, stato, errore) {
            alert("E' avvenuto un errore. " + errore);
         }
       });
-      console.log(chiamata);
     };
 });
 });
