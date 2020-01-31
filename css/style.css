@@ -3,13 +3,15 @@
   margin: 0;
   box-sizing: border-box;
 }
-.container{
-  padding-top: 10px;
-}
+/* generali */
 .flex{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/* primo container */
+.container{
+  padding-top: 10px;
 }
 .box{
   height: 50px;
@@ -22,10 +24,12 @@
 .green{
   background-color: green;
 }
+/* secondon container */
 h2{
   margin-left: 45%;
   margin-top: 20px;
   margin-bottom: 20px;
+  color: green;
 }
 .js_container{
   width: 300px;
