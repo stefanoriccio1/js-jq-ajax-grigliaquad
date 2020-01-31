@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .container{
-  padding-top: 150px;
+  padding-top: 10px;
 }
 .flex{
   display: flex;
@@ -21,4 +21,15 @@
 }
 .green{
   background-color: green;
+}
+h2{
+  margin-left: 47%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.js_container{
+  width: 300px;
+  flex-wrap: wrap;
+  margin:auto;
+  padding-bottom: 100px;
 }

@@ -27,4 +27,9 @@ $(document).ready(function () {
       });
     };
 });
+
+// faccio i box con JS nella oarte inferiore
+for (var i = 0; i < 36; i++) {
+  $('.js_container').append('<div class="box flex"></div>');
+}
 });
